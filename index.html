@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lita's Website</title>
+    <title>Lii</title>
+    <link rel="icon" href="./public/img/logo.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         @keyframes float {
             0%, 100% {
@@ -20,13 +22,12 @@
     <!-- Navbar -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-500">🌸 Lita</a>
+            <a href="#home" class="text-2xl font-bold text-blue-500">🌸 Lita</a>
             <ul class="hidden md:flex space-x-6 text-gray-700">
-                <li><a href="#home" class="hover:text-blue-500">Home</a></li>
-                <li><a href="#about" class="hover:text-blue-500">About</a></li>
-                <li><a href="#portfolio" class="hover:text-blue-500">Portfolio</a></li>
-                <li><a href="#blog" class="hover:text-blue-500">Blog</a></li>
-                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+                <li><a href="#home" class="hover:text-blue-500 scroll-link">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-500 scroll-link">About</a></li>
+                <li><a href="#portfolio" class="hover:text-blue-500 scroll-link">Portfolio</a></li>
+                <li><a href="#blog" class="hover:text-blue-500 scroll-link">Blog</a></li>
             </ul>
             <a href="#contact" class="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400">Hubungi Lita</a>
             <button id="menu-btn" class="md:hidden text-gray-700">
@@ -36,112 +37,196 @@
             </button>
         </div>
         <div id="menu" class="hidden md:hidden px-6 py-4 bg-white">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-500">About</a>
-            <a href="#portfolio" class="block py-2 text-gray-700 hover:text-blue-500">Portfolio</a>
-            <a href="#blog" class="block py-2 text-gray-700 hover:text-blue-500">Blog</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-500">Contact</a>
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-500 scroll-link">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-500 scroll-link">About</a>
+            <a href="#portfolio" class="block py-2 text-gray-700 hover:text-blue-500 scroll-link">Portfolio</a>
+            <a href="#blog" class="block py-2 text-gray-700 hover:text-blue-500 scroll-link">Blog</a>
         </div>
     </nav>
 
-    <!-- Home -->
-    <section id="home" class="py-16 text-center">
+    <section id="home" class="py-16 text-center bg-gradient-to-b from-blue-50 to-pink-100">
         <div class="container mx-auto">
-            <div class="relative inline-block animate-float">
-                <img src="foto-lita-1.jpg" alt="Lita" class="w-48 h-48 rounded-full mx-auto border-4 border-pink-500 shadow-lg">
-                <div class="absolute bottom-0 right-0 bg-yellow-400 text-white text-xs px-2 py-1 rounded-full">✨</div>
+            <div class="w-48 h-48 rounded-full mx-auto border-4 border-pink-500 shadow-lg overflow-hidden">
+                <img src="/public/img/admin02.jpeg" alt="Lita" class="w-full h-full object-cover">
             </div>
             <h1 class="text-4xl font-bold text-gray-800 mt-6">Hai, Aku Lita! 🌟</h1>
             <p class="text-gray-600 mt-4 max-w-xl mx-auto">Selamat datang di tempat penuh cerita dan karya. Yuk, telusuri dunia Lita yang penuh warna dan inspirasi!</p>
             <a href="#portfolio" class="mt-6 inline-block px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-400 shadow-md">Lihat Portfolio</a>
-            <div class="mt-8 flex justify-center space-x-4">
-                <img src="icon1.png" alt="Icon 1" class="w-12 h-12 animate-bounce">
-                <img src="icon2.png" alt="Icon 2" class="w-12 h-12 animate-bounce delay-200">
-                <img src="icon3.png" alt="Icon 3" class="w-12 h-12 animate-bounce delay-400">
-            </div>
         </div>
     </section>
+    
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-16 bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 text-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">✨ Karya Lita ✨</h2>
-        <p class="text-lg text-gray-600 mb-12">Berikut adalah beberapa karya dan proyek yang pernah saya kerjakan. Yuk, lihat lebih dekat! 🖼️</p>
-        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                <img src="project1.jpg" alt="Proyek 1" class="w-full rounded-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mt-4">🎵 Proyek Musik</h3>
-                <p class="text-gray-600 mt-2">Lagu inspiratif yang saya ciptakan untuk berbagi kisah hidup.</p>
+   <!-- About Section -->
+<section id="about" class="py-16 bg-gradient-to-r from-pink-50 to-yellow-50 text-center">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-pink-600 mb-6">💖 Tentang Lita 💖</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto text-lg">Hai, aku Lita! 🎉 Seorang kreator yang mencintai seni, teknologi, dan berbagi kebahagiaan. Aku percaya bahwa setiap karya memiliki cerita dan bisa memberikan inspirasi untuk semua orang. Mari berkenalan lebih dekat! 🌸✨</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+            <!-- Musik -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2 relative">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-pink-400">
+                    <img src="about1.jpg" alt="Musik" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-pink-600">🎵 Musik</h3>
+                <p class="text-gray-600 mt-2">Lagu-lagu inspiratif yang telah didengar lebih dari <strong>12.000 kali</strong> di berbagai platform streaming. 🎤💃</p>
+                <span class="absolute top-3 left-3 bg-yellow-300 text-xs text-white px-2 py-1 rounded-full shadow-lg">🎧 Favorit</span>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                <img src="project2.jpg" alt="Proyek 2" class="w-full rounded-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mt-4">📊 Proyek Akuntansi</h3>
-                <p class="text-gray-600 mt-2">Menganalisis data keuangan dan memberikan solusi inovatif.</p>
+            <!-- Fotografi -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2 relative">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-400">
+                    <img src="about2.jpg" alt="Fotografi" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-blue-600">📸 Fotografi</h3>
+                <p class="text-gray-600 mt-2">Aku suka merekam momen indah dunia! Foto-fotoku telah dipamerkan di <strong>3 galeri seni</strong> dan disukai ratusan pengikut di media sosial. 🌍✨</p>
+                <span class="absolute top-3 left-3 bg-pink-400 text-xs text-white px-2 py-1 rounded-full shadow-lg">📷 Wow!</span>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                <img src="project3.jpg" alt="Proyek 3" class="w-full rounded-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mt-4">📸 Fotografi</h3>
-                <p class="text-gray-600 mt-2">Foto-foto indah yang menangkap momen spesial sehari-hari.</p>
+            <!-- Data -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2 relative">
+                <div class="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-400">
+                    <img src="about3.jpg" alt="Data" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold text-green-600">📊 Data</h3>
+                <p class="text-gray-600 mt-2">Dengan kemampuan analisis data, aku membantu menemukan solusi kreatif yang meningkatkan efisiensi hingga <strong>25%</strong> untuk berbagai proyek! 🚀</p>
+                <span class="absolute top-3 left-3 bg-purple-400 text-xs text-white px-2 py-1 rounded-full shadow-lg">✨ Keren!</span>
             </div>
         </div>
-    </section>
-
-    <!-- Blog -->
-    <section id="blog" class="py-16 bg-white text-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">📖 Catatan Lita</h2>
-        <p class="text-lg text-gray-600 mb-12">Berbagi cerita, tips, dan pengalaman seputar musik, fotografi, dan akuntansi. Yuk, baca! 🌈</p>
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold text-gray-800">🎓 Perjalanan Belajar Akuntansi</h3>
-                <p class="text-gray-600 mt-2">Bagaimana saya menemukan passion saya di dunia akuntansi.</p>
-                <a href="#" class="text-blue-500 hover:underline mt-4 block">Baca selengkapnya</a>
-            </div>
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                <h3 class="text-xl font-semibold text-gray-800">📸 Foto-Foto yang Menjadi Kenangan</h3>
-                <p class="text-gray-600 mt-2">Potret kehidupan sehari-hari yang penuh makna.</p>
-                <a href="#" class="text-blue-500 hover:underline mt-4 block">Baca selengkapnya</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-16 bg-gradient-to-r from-blue-100 via-green-100 to-yellow-100 text-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">📬 Hubungi Lita</h2>
-        <p class="text-lg text-gray-600 mb-12">Jika ada pertanyaan atau hanya ingin menyapa, jangan ragu untuk menghubungi saya! 🌟</p>
-        <form action="#" method="POST" class="container mx-auto max-w-lg space-y-6">
-            <input type="email" name="email" placeholder="Email Anda" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <textarea name="message" placeholder="Pesan Anda" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="5"></textarea>
-            <button type="submit" class="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-400 transition">Kirim Pesan</button>
-        </form>
         <div class="mt-12">
-            <a href="#" class="inline-block mx-4 text-blue-500 hover:underline">Instagram</a>
-            <a href="#" class="inline-block mx-4 text-blue-500 hover:underline">LinkedIn</a>
-            <a href="#" class="inline-block mx-4 text-blue-500 hover:underline">Twitter</a>
+            <h3 class="text-2xl font-semibold text-purple-600">💌 Fun Facts Tentang Lita 💌</h3>
+            <ul class="list-disc list-inside text-left mx-auto max-w-md mt-4 text-gray-700">
+                <li>🙌 Penggemar berat dessert! Cupcake dan cokelat adalah favoritku. 🍫🧁</li>
+                <li>📚 Selalu belajar hal baru, mulai dari coding hingga seni watercolor. 🎨</li>
+                <li>🐾 Pecinta hewan! Aku punya seekor kucing bernama Luna. 🐱</li>
+                <li>🌈 Motto hidupku: "Berikan yang terbaik, dan nikmati setiap prosesnya." 💕</li>
+            </ul>
         </div>
-    </section>
+    </div>
+</section>
+
+
+    <!-- Portfolio Section -->
+<section id="portfolio" class="py-16 bg-gradient-to-r from-yellow-50 via-pink-50 to-purple-50 text-center">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-purple-700 mb-6">🌟 Portfolio Lita 🌟</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Yuk, lihat karya-karya keren Lita yang penuh kreativitas dan inspirasi! ✨</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div class="relative group">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-pink-500">
+                        <img src="project1.jpg" alt="Proyek Musik" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-pink-600 group-hover:text-purple-600">🎵 Musik</h3>
+                    <p class="text-gray-600 mt-2">Menciptakan lagu yang telah didengar lebih dari <strong>10.000 kali</strong> di platform. 🎤</p>
+                </div>
+                <span class="absolute -top-3 -right-3 bg-yellow-300 text-xs text-white px-2 py-1 rounded-full shadow-lg">🌟</span>
+            </div>
+            <div class="relative group">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500">
+                        <img src="project2.jpg" alt="Proyek Fotografi" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-600 group-hover:text-purple-600">📸 Fotografi</h3>
+                    <p class="text-gray-600 mt-2">Karya fotografi dipamerkan di acara seni lokal & disukai oleh ratusan pengikut. 📷✨</p>
+                </div>
+                <span class="absolute -top-3 -right-3 bg-pink-400 text-xs text-white px-2 py-1 rounded-full shadow-lg">💖</span>
+            </div>
+            <div class="relative group">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
+                        <img src="project3.jpg" alt="Proyek Data" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-green-600 group-hover:text-purple-600">📊 Analisis Data</h3>
+                    <p class="text-gray-600 mt-2">Proyek data membantu meningkatkan efisiensi perusahaan hingga <strong>20%</strong>. 📈</p>
+                </div>
+                <span class="absolute -top-3 -right-3 bg-purple-400 text-xs text-white px-2 py-1 rounded-full shadow-lg">🚀</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+   <!-- Blog Section -->
+<section id="blog" class="py-16 bg-gradient-to-r from-blue-50 to-pink-50 text-center">
+    <h2 class="text-4xl font-bold text-purple-600 mb-6">📖 Catatan Cerita Lita 🌟</h2>
+    <p class="text-gray-700 max-w-3xl mx-auto text-lg">Selamat datang di sudut kecil penuh cerita! Di sini, aku berbagi perjalanan, inspirasi, dan petualangan seru yang membuat hariku lebih berwarna. Yuk, baca kisah serunya! 💌✨</p>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <!-- Blog 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2 relative">
+            <div class="w-full h-40 rounded-lg overflow-hidden mb-4">
+                <img src="blog1.jpg" alt="Perjalanan Belajar" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-2xl font-bold text-purple-600">🎓 Perjalanan Belajar</h3>
+            <p class="text-gray-600 mt-2">Dari kebingungan hingga menemukan <strong>passion</strong>, inilah kisahku menjelajahi dunia data dan seni. 🎨📊</p>
+            <button class="mt-4 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700">Baca Selengkapnya</button>
+        </div>
+        <!-- Blog 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition duration-300 hover:-translate-y-2 relative">
+            <div class="w-full h-40 rounded-lg overflow-hidden mb-4">
+                <img src="blog2.jpg" alt="Fotografi Inspiratif" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-2xl font-bold text-blue-600">📸 Fotografi Inspiratif</h3>
+            <p class="text-gray-600 mt-2">Mengabadikan potret-potret sederhana yang ternyata punya cerita mendalam. 🌼✨</p>
+            <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700">Baca Selengkapnya</button>
+        </div>
+    </div>
+    <div class="mt-12">
+        <h3 class="text-2xl font-bold text-pink-600">💌 Mengapa Catatan Lita Berbeda?</h3>
+        <p class="text-gray-700 mt-4 max-w-2xl mx-auto">Blog ini bukan sekadar tulisan, tapi juga <strong>tempatku berbagi energi positif</strong>. Semua yang kutulis berasal dari pengalaman nyata yang semoga bisa menginspirasi dan memberikan senyuman. 😊💖</p>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+<section id="contact" class="py-16 bg-gradient-to-r from-blue-100 via-green-100 to-yellow-100 text-center">
+    <h2 class="text-4xl font-bold text-gray-800 mb-6">📬 Yuk, Kirim Pesan ke Lita!</h2>
+    <p class="text-gray-600 max-w-md mx-auto mb-8">Ada pertanyaan atau sekadar ingin say hi? Kirim pesan atau temui aku di sosial media, ya! Aku janji nggak gigit kok. 🐾✨</p>
+    <form action="#" method="POST" class="container mx-auto max-w-lg space-y-6">
+        <input type="email" name="email" placeholder="Email kamu, e.g., kamu@gmail.com" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-blue-500 focus:outline-none" required>
+        <textarea name="message" placeholder="Tulis pesanmu di sini..." class="w-full p-4 border-2 border-gray-300 rounded-lg focus:ring-blue-500 focus:outline-none" rows="5" required></textarea>
+        <button type="submit" class="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">📮 Kirim Pesan</button>
+    </form>
+    <div class="mt-8">
+        <p class="text-gray-700 font-medium">Atau temukan aku di sini:</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="https://instagram.com/akunlita" target="_blank" class="text-pink-500 text-3xl hover:text-pink-600 transition">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/akunlita" target="_blank" class="text-blue-400 text-3xl hover:text-blue-500 transition">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/akunlita" target="_blank" class="text-blue-700 text-3xl hover:text-blue-800 transition">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:akunlita@gmail.com" target="_blank" class="text-red-500 text-3xl hover:text-red-600 transition">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
 
     <script>
-        const menuToggle = document.getElementById('menu-btn');
-        const menu = document.getElementById('menu');
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    
-        // Placeholder for form submission
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Pesan berhasil dikirim!');
-        });
-    
-        // Placeholder for portfolio and blog links
-        const links = document.querySelectorAll('a[href="#"]');
-        links.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Fitur ini akan segera tersedia!');
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuLinks = document.querySelectorAll(".scroll-link");
+            menuLinks.forEach(link => {
+                link.addEventListener("click", event => {
+                    event.preventDefault(); // Mencegah perilaku default tautan
+                    const targetId = link.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: "smooth" });
+                    }
+                });
+            });
+
+            // Toggle mobile menu
+            const menuBtn = document.getElementById("menu-btn");
+            const menu = document.getElementById("menu");
+            menuBtn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
             });
         });
     </script>
-    
 </body>
 </html>
