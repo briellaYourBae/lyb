@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lita's Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gradient-to-r from-blue-50 to-pink-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-500">🌸 Lita</a>
+            <ul class="hidden md:flex space-x-6 text-gray-700">
+                <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                <li><a href="#portfolio" class="hover:text-blue-500">Portfolio</a></li>
+                <li><a href="#blog" class="hover:text-blue-500">Blog</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+            <a href="#contact" class="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400">Hubungi Lita</a>
+            <button id="menu-btn" class="md:hidden text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="menu" class="hidden md:hidden px-6 py-4 bg-white">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-500">About</a>
+            <a href="#portfolio" class="block py-2 text-gray-700 hover:text-blue-500">Portfolio</a>
+            <a href="#blog" class="block py-2 text-gray-700 hover:text-blue-500">Blog</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="py-16 text-center">
+        <div class="container mx-auto">
+            <div class="relative inline-block animate-float">
+                <img src="foto-lita-1.jpg" alt="Lita" class="w-48 h-48 rounded-full mx-auto border-4 border-pink-500 shadow-lg">
+                <div class="absolute bottom-0 right-0 bg-yellow-400 text-white text-xs px-2 py-1 rounded-full">✨</div>
+            </div>
+            <h1 class="text-4xl font-bold text-gray-800 mt-6">Hai, Aku Lita! 🌟</h1>
+            <p class="text-gray-600 mt-4 max-w-xl mx-auto">Selamat datang di tempat penuh cerita dan karya. Yuk, telusuri dunia Lita yang penuh warna dan inspirasi!</p>
+            <a href="#portfolio" class="mt-6 inline-block px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-400 shadow-md">Lihat Portfolio</a>
+            <div class="mt-8 flex justify-center space-x-4">
+                <img src="icon1.png" alt="Icon 1" class="w-12 h-12 animate-bounce">
+                <img src="icon2.png" alt="Icon 2" class="w-12 h-12 animate-bounce delay-200">
+                <img src="icon3.png" alt="Icon 3" class="w-12 h-12 animate-bounce delay-400">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-16 bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">✨ Karya Lita ✨</h2>
+        <p class="text-lg text-gray-600 mb-12">Berikut adalah beberapa karya dan proyek yang pernah saya kerjakan. Yuk, lihat lebih dekat! 🖼️</p>
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <img src="project1.jpg" alt="Proyek 1" class="w-full rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mt-4">🎵 Proyek Musik</h3>
+                <p class="text-gray-600 mt-2">Lagu inspiratif yang saya ciptakan untuk berbagi kisah hidup.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <img src="project2.jpg" alt="Proyek 2" class="w-full rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mt-4">📊 Proyek Akuntansi</h3>
+                <p class="text-gray-600 mt-2">Menganalisis data keuangan dan memberikan solusi inovatif.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <img src="project3.jpg" alt="Proyek 3" class="w-full rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mt-4">📸 Fotografi</h3>
+                <p class="text-gray-600 mt-2">Foto-foto indah yang menangkap momen spesial sehari-hari.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-16 bg-white text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">📖 Catatan Lita</h2>
+        <p class="text-lg text-gray-600 mb-12">Berbagi cerita, tips, dan pengalaman seputar musik, fotografi, dan akuntansi. Yuk, baca! 🌈</p>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold text-gray-800">🎓 Perjalanan Belajar Akuntansi</h3>
+                <p class="text-gray-600 mt-2">Bagaimana saya menemukan passion saya di dunia akuntansi.</p>
+                <a href="#" class="text-blue-500 hover:underline mt-4 block">Baca selengkapnya</a>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold text-gray-800">📸 Foto-Foto yang Menjadi Kenangan</h3>
+                <p class="text-gray-600 mt-2">Potret kehidupan sehari-hari yang penuh makna.</p>
+                <a href="#" class="text-blue-500 hover:underline mt-4 block">Baca selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-blue-100 via-green-100 to-yellow-100 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">📬 Hubungi Lita</h2>
+        <p class="text-lg text-gray-600 mb-12">Jika ada pertanyaan atau hanya ingin menyapa, jangan ragu untuk menghubungi saya! 🌟</p>
+        <form action="#" method="POST" class="container mx-auto max-w-lg space-y-6">
+            <input type="email" name="email" placeholder="Email Anda" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <textarea name="message" placeholder="Pesan Anda" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="5"></textarea>
+            <button type="submit" class="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-400 transition">Kirim Pesan</button>
+        </form>
+        <div class="mt-12">
+            <a href="#" class="inline-block mx-4 text-blue-500 hover:underline">Instagram</a>
+            <a href="#" class="inline-block mx-4 text-blue-500 hover:underline">LinkedIn</a>
+            <a href="#" class="inline-block mx-4 text-blue-500 hover:underline">Twitter</a>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
