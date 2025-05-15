@@ -51,7 +51,7 @@
         <ul class="hidden md:flex space-x-6 text-gray-700 font-poppins">
             <li><a href="#home" class="hover:text-blue-500 scroll-link">Home</a></li>
             <li><a href="#about" class="hover:text-blue-500 scroll-link">About</a></li>
-            <li><a href="#portfolio" id="btn-portfolio" class="mt-6 inline-block px-6 py-3 bg-purple-500 text-white rounded-full hover:bg-purple-400 shadow-md cursor-pointer">Lihat Portfolio</a></li>
+            <li><a href="#portfolio" class="hover:text-blue-500 scroll-link">portfolio</a></li>
             <li><a href="#blog" class="hover:text-blue-500 scroll-link">Blog</a></li>
         </ul>
         <a href="#contact" class="hidden md:block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 font-poppins">Hubungi Lita</a>
@@ -86,18 +86,16 @@
 <!-- About Section -->
 <section id="about" class="py-16 bg-gradient-to-r from-pink-50 to-yellow-50 text-center fade-in-up">
     <div class="w-full px-4 md:px-6">
-        <h2 class="text-4xl font-bold text-pink-600 mb-6">Tentang Lita</h2>
-        <p class="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed px-6">
-            Saya adalah lulusan SMK Negeri 1 Purwokerto, jurusan Akuntansi Keuangan dan Lembaga. Saat ini, saya sedang menunggu perkuliahan di Universitas Negeri Jenderal Soedirman (Unsoed).<br />
-            Saya memiliki hobi memasak dan bermain game, dua hal yang mencerminkan sisi kreatif sekaligus kemampuan berpikir strategis saya. Pengalaman sebagai anggota ekstrakurikuler Paskibra membentuk saya menjadi pribadi yang disiplin, bertanggung jawab, dan mampu memimpin.<br /><br />
-            Selain itu, saya pernah aktif di GenBI Purwokerto (di bawah naungan Bank Indonesia), terlibat dalam berbagai kegiatan sosial dan edukatif untuk meningkatkan literasi ekonomi di kalangan generasi muda. Saat ini, saya juga terbuka untuk kesempatan kerja part time yang bisa mengasah keterampilan dan menambah pengalaman.
-            Mari saling mengenal lebih dekat! 🌸✨
-        </p>
+      <h2 class="text-4xl font-bold text-pink-600 mb-6">Tentang Lita</h2>
+      <p id="about-text" 
+         class="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed px-6"
+         data-text="Saya adalah lulusan SMK Negeri 1 Purwokerto, jurusan Akuntansi Keuangan dan Lembaga. Saat ini, saya sedang menunggu perkuliahan di Universitas Negeri Jenderal Soedirman (Unsoed).<br><br>Saya memiliki hobi memasak dan bermain game, dua hal yang mencerminkan sisi kreatif sekaligus kemampuan berpikir strategis saya. Pengalaman sebagai anggota ekstrakurikuler Paskibra membentuk saya menjadi pribadi yang disiplin, bertanggung jawab, dan mampu memimpin.<br><br>Selain itu, saya pernah aktif di GenBI Purwokerto (di bawah naungan Bank Indonesia), terlibat dalam berbagai kegiatan sosial dan edukatif untuk meningkatkan literasi ekonomi di kalangan generasi muda. Saat ini, saya juga terbuka untuk kesempatan kerja part time yang bisa mengasah keterampilan dan menambah pengalaman.<br><br>Mari saling mengenal lebih dekat! 🌸✨">
+      </p>
     </div>
-</section>
+  </section>
 
 <!-- Portfolio Section -->
-<section id="portfolio" class="py-16 bg-gradient-to-r from-yellow-50 via-pink-50 to-purple-50 text-center fade-in-up">animasi 
+<section id="portfolio" class="py-16 bg-gradient-to-r from-yellow-50 via-pink-50 to-purple-50 text-center fade-in-up">
     <div class="container mx-auto">
         <h2 class="text-4xl font-bold text-purple-700 mb-6">🌟 Portfolio Lita 🌟</h2>
         <p class="text-gray-600 max-w-2xl mx-auto px-6">
@@ -201,14 +199,48 @@
 </div>
 </section>
 
-    <!-- Footer -->
-    <footer class="bg-white text-red py-2 left-0 w-full">
-        <div class="container mx-auto text-center">
-            <p class="text-sm" id="footer-text"></p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer class="bg-gray-100 text-gray-700 py-4 w-full mt-12 border-t border-gray-200">
+    <div class="container mx-auto text-center">
+      <p class="text-sm" id="footer-text"></p>
+    </div>
+  </footer>
+  
+
+  
 
 <script>
+
+    // Set year secara otomatis
+  const year = new Date().getFullYear();
+  document.getElementById("footer-text").innerHTML = `&copy; ${year} Managed by BrieLLa.Yourbae.`;
+
+
+
+    //   ngetik
+    document.addEventListener("DOMContentLoaded", function() {
+        const p = document.getElementById("about-text");
+        const fullText = p.getAttribute("data-text");
+        let index = 0;
+        
+        function typeWriter() {
+        if (index < fullText.length) {
+            // Cek apakah substring saat ini adalah tag <br>
+            if (fullText.substring(index, index + 4) === "<br>") {
+            p.innerHTML += "<br>";
+            index += 4;
+            } else {
+            p.innerHTML += fullText.charAt(index);
+            index++;
+            }
+            setTimeout(typeWriter, 40);
+        }
+        }
+        
+        typeWriter();
+    });
+
+
     // Toggle menu on mobile
     document.getElementById('menu-btn').addEventListener('click', () => {
         const menu = document.getElementById('menu');
@@ -260,12 +292,6 @@
         }, 500);
         }, 700);
     });
-
-
-
-    const currentYear = new Date().getFullYear();
-  const footerText = document.getElementById('footer-text');
-  footerText.textContent = `© ${currentYear} Managed by BrieLLa.Yourbae.`;
 
   
 </script>
