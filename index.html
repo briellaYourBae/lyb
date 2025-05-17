@@ -210,12 +210,10 @@
   
 
 <script>
-
-    // Set year secara otomatis
-  const year = new Date().getFullYear();
-  document.getElementById("footer-text").innerHTML = `&copy; ${year} Managed by BrieLLa.Yourbae.`;
-
-
+    // copy
+    const year = new Date().getFullYear();
+    document.getElementById("footer-text").innerHTML = `&copy; ${year} Managed by
+    <a href="https://briellayourbae.github.io/byb/" target="_blank" class="text-blue-600 hover:underline">BrieLLa.YB</a>`;
 
     //   ngetik
     document.addEventListener("DOMContentLoaded", function() {
@@ -225,7 +223,6 @@
         
         function typeWriter() {
         if (index < fullText.length) {
-            // Cek apakah substring saat ini adalah tag <br>
             if (fullText.substring(index, index + 4) === "<br>") {
             p.innerHTML += "<br>";
             index += 4;
@@ -274,18 +271,11 @@
 
     btnPortfolio.addEventListener('click', function(e) {
         e.preventDefault();
-
-        // Animasi fade out home dulu
         homeSection.classList.add('fade-out');
-
-        // Setelah animasi fade out selesai (700ms), scroll ke portfolio dan fade in portfolio
         setTimeout(() => {
         portfolioSection.scrollIntoView({ behavior: 'smooth' });
-
-        // Pastikan portfolio punya opacity 0 dulu untuk animasi fade in
         portfolioSection.classList.remove('animate');
         portfolioSection.classList.add('opacity-0');
-
         setTimeout(() => {
             portfolioSection.classList.remove('opacity-0');
             portfolioSection.classList.add('animate');
